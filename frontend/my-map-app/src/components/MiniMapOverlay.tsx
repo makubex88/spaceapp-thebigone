@@ -90,27 +90,7 @@ const MiniMapOverlay: React.FC<MiniMapOverlayProps> = ({ landChangeData }) => {
         />
          <Polyline positions={valleyFault} color="red" weight={3} dashArray="5,10" />
 
-         {landChangeFeatures.map((feature) => (
-        <CircleMarker
-            key={feature.id}
-            center={feature.geometry.coordinates}
-            radius={6}
-            pathOptions={{ color: getColorByChangeType(feature.change_type), fillOpacity: 0.7 }}
-        >
-            <Popup>
-            <div>
-                <strong>ID:</strong> {feature.id} <br />
-                <strong>Nearest Fault:</strong> {feature.nearest_fault} <br />
-                <strong>Change Type:</strong> {feature.change_type} <br />
-                <strong>Deformation (mm):</strong> {feature.deformation_mm} <br />
-                <strong>Distance to Fault (km):</strong> {feature.distance_to_fault_km} <br />
-                <strong>Amplitude:</strong> {feature.amplitude} <br />
-                <strong>Phase Shift (radians):</strong> {feature.phase_shift_radians} <br />
-                <strong>Data Source:</strong> {feature.data_source}
-            </div>
-            </Popup>
-        </CircleMarker>
-        ))}
+        
 
 
 

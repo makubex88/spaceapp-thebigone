@@ -180,7 +180,7 @@ const HazardMap: React.FC = () => {
         <Marker position={antipolo}>
           <Popup>City of Antipolo</Popup>
         </Marker>
-        <MiniMapOverlay landChangeData={undefined} />
+        <MiniMapOverlay landChangeData={landChangeFeatures[0]} />
         <MapLegend /> {/* ✅ Legend added */}
       </MapContainer>
     </div>
